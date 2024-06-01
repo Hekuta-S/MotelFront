@@ -1,0 +1,16 @@
+<form class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
+  <mat-form-field class="example-full-width">
+    <mat-label class="uppercase font-bold ">Nombre de Categoria</mat-label>
+    <input matInput>
+  </mat-form-field>
+
+  <mat-chip-listbox class="mat-mdc-chip-set-stacked" aria-label="Selection">
+    <mat-chip-option [color]="'none'" class="hover:bg-orange-100">Sí</mat-chip-option>
+    <mat-chip-option [color]="'warn'">No</mat-chip-option>
+  </mat-chip-listbox>
+  
+  <button mat-flat-button class="orange-button hover:bg-white font-bold shadow-lg border-spacing-8 ">
+    <mat-icon>add</mat-icon>
+    Registrar
+  </button>
+</form>

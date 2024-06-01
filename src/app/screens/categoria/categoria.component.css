@@ -1,0 +1,48 @@
+/* Estilos para el contenedor principal que centrará el contenedor del formulario */
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilos para el contenedor naranja */
+.contenedor-categoria-crud {
+  background-color: orange;
+  padding: 20px; /* Ajusta el padding según tus necesidades */
+  border-radius: 10px; /* Bordes redondeados */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Estilos para el botón naranja con bordes redondeados */
+.orange-button {
+  background-color: orange;
+  color: white;
+  border-radius: 20px; /* Ajusta el valor según tus necesidades */
+  margin-top: 20px; /* Espaciado superior para el botón */
+}
+
+/* Ajustar el color del icono si es necesario */
+.orange-button mat-icon {
+  color: white;
+}
+
+/* Estilos para el formulario */
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+/* Estilos para los campos de formulario de ancho completo */
+.example-full-width {
+  width: 100%;
+}
+
+/* Ajustar el tamaño máximo del chip listbox */
+.mat-mdc-chip-set-stacked {
+  max-width: 200px;
+}
