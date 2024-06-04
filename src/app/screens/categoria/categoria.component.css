@@ -1,48 +1,87 @@
-/* Estilos para el contenedor principal que centrará el contenedor del formulario */
-body, html {
-  height: 100%;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Estilos para el contenedor naranja */
-.contenedor-categoria-crud {
-  background-color: orange;
-  padding: 20px; /* Ajusta el padding según tus necesidades */
-  border-radius: 10px; /* Bordes redondeados */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+/* src/assets/css/styles.css */
 
 /* Estilos para el botón naranja con bordes redondeados */
 .orange-button {
-  background-color: orange;
+  background-color: var(--orange-500, #f97316); /* Usar variable de PrimeNG si existe, de lo contrario, usar color por defecto */
   color: white;
-  border-radius: 20px; /* Ajusta el valor según tus necesidades */
-  margin-top: 20px; /* Espaciado superior para el botón */
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
 }
 
-/* Ajustar el color del icono si es necesario */
+.orange-button:hover {
+  background-color: white;
+  color: var(--orange-500, #f97316);
+}
+
 .orange-button mat-icon {
   color: white;
 }
 
-/* Estilos para el formulario */
-.example-form {
-  min-width: 150px;
-  max-width: 500px;
-  width: 100%;
+/* Aumentar el tamaño del input sin afectar el texto */
+.form-container .form .p-field .p-float-label input {
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
 }
 
-/* Estilos para los campos de formulario de ancho completo */
+.form-container .form .p-field .p-float-label input:focus {
+  border-color: var(--orange-500, #f97316); /* Cambiar el color del borde en focus */
+  box-shadow: 0 0 5px var(--orange-500, #f97316); /* Añadir sombra al focus */
+}
+
+/* Estilos para el contenedor del formulario */
+.form-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f3f4f6;
+}
+
+/* Estilos para el formulario */
+.form {
+  width: 100%;
+  max-width: 28rem;
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
 .example-full-width {
   width: 100%;
 }
 
-/* Ajustar el tamaño máximo del chip listbox */
-.mat-mdc-chip-set-stacked {
-  max-width: 200px;
+.mat-mdc-chip-set-stacked .hover\:bg-orange-100:hover {
+  background-color: #ffedd5;
+}
+
+.mat-mdc-chip-set-stacked .warn {
+  background-color: #e57373;
+}
+
+.mat-mdc-chip-set-stacked .none {
+  background-color: inherit;
+}
+
+::ng-deep .p-float-label input:focus + label,
+::ng-deep .p-float-label input.ng-dirty + label {
+  color: var(--orange-500, #f97316) !important;
+}
+
+/* Estilos para p-inputSwitch */
+::ng-deep .p-inputswitch .p-inputswitch-slider {
+  background-color: var(--orange-200) !important;
+}
+
+::ng-deep .p-inputswitch .p-inputswitch-slider:before {
+  background-color: white !important; /* Puedes ajustar esto según tus necesidades */
+}
+
+::ng-deep .p-inputswitch.p-inputswitch-checked .p-inputswitch-slider {
+  background-color: var(--orange-500) !important;
 }

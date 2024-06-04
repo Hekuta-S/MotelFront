@@ -9,23 +9,30 @@ import { MatListModule } from '@angular/material/list';
 import { RouterModule, Routes } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
+import { RippleModule } from 'primeng/ripple';
+import { AvatarModule } from 'primeng/avatar';
+import { StyleClassModule } from 'primeng/styleclass';
+import { Sidebar } from 'primeng/sidebar';
+
 import { ToastModule } from 'primeng/toast';
 import { SpeedDialModule } from 'primeng/speeddial';
-import { PrimeNGConfig } from 'primeng/api';
+import { InputSwitchModule } from 'primeng/inputswitch';
+import { CardModule } from 'primeng/card';
+import { SidebarModule } from 'primeng/sidebar';
+import { MenubarModule } from 'primeng/menubar';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import { AppComponent } from './app.component';
 import { HabitacionesComponent } from './screens/habitaciones/habitaciones.component';
-import { DashboardComponent } from './screens/dashboard/dashboard.component';
 import { InventarioComponent } from './screens/inventario/inventario.component';
 import { FacturaComponent } from './screens/factura/factura.component'; 
 import { MatChipsModule } from '@angular/material/chips';
 import { CategoriaComponent } from './screens/categoria/categoria.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-  { path: 'dashboard', component: DashboardComponent },
+  { path: '', redirectTo: '/categoria', pathMatch: 'full' },
   { path: 'habitaciones', component: HabitacionesComponent },
   { path: 'inventario', component: InventarioComponent },
   { path: 'factura', component: FacturaComponent },
@@ -37,16 +44,22 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
+    
     AppComponent,
     HabitacionesComponent,
-    DashboardComponent,
     InventarioComponent,
     FacturaComponent, 
-   CategoriaComponent
+    LoginComponent
   ],
 
   imports: [
+ RippleModule,
+ AvatarModule,
+ StyleClassModule,
+    SidebarModule,
+    MenubarModule,
     MatChipsModule,
+    InputSwitchModule,
     MatInputModule,
     FormsModule,
    MatFormFieldModule,
@@ -61,6 +74,7 @@ const routes: Routes = [
     InputTextModule,
     ToastModule,
     SpeedDialModule,
+  CardModule,
     
     RouterModule.forRoot(routes)
   ],

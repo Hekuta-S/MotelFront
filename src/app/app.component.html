@@ -1,48 +1,7 @@
-<mat-drawer-container class="example-container" autosize (click)="drawer.close()">
-  <mat-drawer #drawer class="example-sidenav" mode="side">
-    <mat-nav-list>
-      <mat-list-item [routerLink]="['/categoria']">
-        <mat-icon>bed</mat-icon>
-        Habitaciones
-      </mat-list-item>
-      <mat-list-item [routerLink]="['/inventario']">
-        <mat-icon>inventory_2</mat-icon> <!-- Icono -->
-        Inventario
-      </mat-list-item>
-      <mat-list-item [routerLink]="['/factura']">
-        <mat-icon>event_note</mat-icon> <!-- Icono -->
-        Historial de Facturas
-      </mat-list-item>
-      <mat-list-item [routerLink]="['/dashboard']">
-        <mat-icon>bar_chart</mat-icon> <!-- Icono -->
-        Dashboard
-      </mat-list-item>  
-      
-    </mat-nav-list>
-    <p-button label="Submit" />
-    <!-- Botón al final de la pantalla -->
-    <div class="bottom-button">
-      <button mat-button > <mat-icon>support_agent</mat-icon>Servicio al cliente</button>
-    </div>
-  </mat-drawer>
-
-  <div class="example-sidenav-content">
-    <!-- Navbar -->
-    <mat-toolbar color="primary" class="custom-navbar">
-      <button mat-icon-button (click)="drawer.toggle(); $event.stopPropagation()"> <!-- Detener la propagación del evento -->
-        <mat-icon>menu</mat-icon>
-      </button>
-      <span class="toolbar-title">Papus¡?</span>
-
-      <span class="spacer"></span>
-
-      <div class="profile-container">
-        <span class="profile-name">Your Name</span>
-        <img class="profile-photo" src="path/to/your/profile/photo.jpg" alt="Profile Photo">
-      </div>
-    </mat-toolbar>
-
-    <!-- Main Content -->
-    <router-outlet></router-outlet>
-  </div>
-</mat-drawer-container>
+<div class="card flex justify-content-between align-items-center p-2">
+  <p-button icon="pi pi-bars" (click)="toggleSidebar()"></p-button>
+  <span class="text-lg font-bold">PapusShop</span>
+</div>
+<p-sidebar [(visible)]="sidebarVisible">
+  <!-- Contenido del sidebar aquí -->
+</p-sidebar>
