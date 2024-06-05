@@ -1,7 +1,36 @@
-<div class="card flex justify-content-between align-items-center p-2">
-  <p-button icon="pi pi-bars" (click)="toggleSidebar()"></p-button>
-  <span class="text-lg font-bold">PapusShop</span>
+<div class="card flex justify-content-between align-items-center p-2 gap-3">
+  <button class="custom-button" (click)="toggleSidebar()">
+    <i class="pi pi-bars custom-icon glow-on-hover"></i>
+  </button>
+  <span class="text-lg font-bold glow-on-hover">PapusShop</span>
 </div>
 <p-sidebar [(visible)]="sidebarVisible">
-  <!-- Contenido del sidebar aquí -->
+  <ng-template pTemplate="header">
+    <div class="flex align-items-center gap-2">
+      <p-avatar 
+                    image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png" 
+                    shape="circle" />
+                <span class="font-bold">
+                    Hekuta 
+                </span>
+    </div>
+  </ng-template>
+  <div class="sidebar-buttons">
+    <button class="sidebar-button" >
+      <i class="pi pi-users"></i>
+      <span>Usuarios</span>
+    </button>
+    <button class="sidebar-button" >
+      <i class="pi pi-objects-column"></i>
+      <span>Categorias</span>
+    </button>
+    <button class="sidebar-button" >
+      <i class="pi pi-truck"></i>
+      <span>Productos</span>
+    </button>
+    <button class="sidebar-button" >
+      <i class="pi pi-receipt"></i>
+      <span>Facturas</span>
+    </button>
+  </div>
 </p-sidebar>
