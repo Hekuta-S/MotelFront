@@ -13,7 +13,6 @@ import { RippleModule } from 'primeng/ripple';
 import { AvatarModule } from 'primeng/avatar';
 import { StyleClassModule } from 'primeng/styleclass';
 import { Sidebar } from 'primeng/sidebar';
-
 import { ToastModule } from 'primeng/toast';
 import { SpeedDialModule } from 'primeng/speeddial';
 import { InputSwitchModule } from 'primeng/inputswitch';
@@ -29,16 +28,15 @@ import { InventarioComponent } from './screens/inventario/inventario.component';
 import { FacturaComponent } from './screens/factura/factura.component'; 
 import { MatChipsModule } from '@angular/material/chips';
 import { CategoriaComponent } from './screens/categoria/categoria.component';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './screens/login/login.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/categoria', pathMatch: 'full' },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'habitaciones', component: HabitacionesComponent },
   { path: 'inventario', component: InventarioComponent },
-  { path: 'factura', component: FacturaComponent },
-
-  
-  { path: 'categoria', component: CategoriaComponent },
+  { path: 'facturas', component: FacturaComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'categorias', component: CategoriaComponent },
   // otras rutas
 ];
 

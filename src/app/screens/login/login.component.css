@@ -1,0 +1,40 @@
+.form-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f3f4f6;
+}
+
+.form {
+    width: 100%;
+    max-width: 28rem;
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+
+.input-container {
+    margin-bottom: 1rem; /* Agregamos margen inferior para separar los campos de entrada */
+}
+
+/* Estilos para el input */
+.input-container input {
+    width: 100%;
+    padding: 1rem 0.75rem;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    transition: border-color 0.3s ease; /* Transición suave para el color del borde */
+}
+
+/* Estilos para el borde del input cuando está enfocado */
+.input-container input:focus {
+    border-color: var(--orange-500, #f97316); /* Color naranja cuando el input está enfocado */
+    outline: none; /* Elimina el borde de enfoque predeterminado */
+    box-shadow: 0 0 5px var(--orange-500, #f97316); /* Añadir sombra al focus */
+}
+

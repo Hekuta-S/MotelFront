@@ -16,21 +16,23 @@
     </div>
   </ng-template>
   <div class="sidebar-buttons">
-    <button class="sidebar-button" >
+    <button class="sidebar-button" routerLink="/login">
       <i class="pi pi-users"></i>
       <span>Usuarios</span>
     </button>
-    <button class="sidebar-button" >
+    <button class="sidebar-button" routerLink="/categorias">
       <i class="pi pi-objects-column"></i>
       <span>Categorias</span>
     </button>
-    <button class="sidebar-button" >
+    <button class="sidebar-button" routerLink="/inventario">
       <i class="pi pi-truck"></i>
       <span>Productos</span>
     </button>
-    <button class="sidebar-button" >
+    <button class="sidebar-button" routerLink="/facturas">
       <i class="pi pi-receipt"></i>
       <span>Facturas</span>
     </button>
   </div>
 </p-sidebar>
+<router-outlet></router-outlet>
+

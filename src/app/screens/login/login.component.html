@@ -1,0 +1,23 @@
+<div class="form-container">
+    <form class="form">
+      <div class="p-field p-grid">
+        <div class="card flex justify-content-center example-full-width input-container">
+          <div class="form-group">
+            <mat-icon>home</mat-icon>
+            <label for="user">Usuario/Correo</label>
+            <input pInputText id="user" [(ngModel)]="username" name="usuario" class="text-lg py-2 px-3 rounded-md shadow-md border border-gray-300 " required />
+          </div>
+        </div>
+      </div>
+      <div class="p-field p-grid">
+        <div class="card flex justify-content-center example-full-width input-container">
+          <div class="form-group">
+            <i class="pi pi-lock"></i>
+            <label for="password">Contraseña</label>
+            <input pInputText id="contraseña" [(ngModel)]="password" name="passwword" class="text-lg py-2 px-3 rounded-md shadow-md border border-gray-300" required />
+            <p-button label="Ingresar" class="orange-button"></p-button>
+          </div>
+        </div>
+      </div>
+    </form>
+</div>
