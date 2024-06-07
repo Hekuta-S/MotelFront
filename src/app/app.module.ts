@@ -11,6 +11,10 @@ import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { RippleModule } from 'primeng/ripple';
 import { AvatarModule } from 'primeng/avatar';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
+library.add(faUser);
 import { StyleClassModule } from 'primeng/styleclass';
 import { Sidebar } from 'primeng/sidebar';
 import { ToastModule } from 'primeng/toast';
@@ -42,12 +46,12 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    
     AppComponent,
     HabitacionesComponent,
     InventarioComponent,
     FacturaComponent, 
-    LoginComponent
+    LoginComponent,
+  
   ],
 
   imports: [
@@ -68,6 +72,7 @@ const routes: Routes = [
     MatButtonModule,
     MatIconModule,
     MatListModule,
+    FontAwesomeModule,
     ButtonModule,
     InputTextModule,
     ToastModule,

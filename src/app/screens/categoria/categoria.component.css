@@ -1,112 +1,51 @@
-/* src/assets/css/styles.css */
-
-/* Estilos para el botón naranja con bordes redondeados */
-.orange-button {
-  background-color: var(--orange-500, #f97316); /* Usar variable de PrimeNG si existe, de lo contrario, usar color por defecto */
-  color: white;
-  border-radius: 20px;
-  transition: background-color 0.3s ease;
-}
-
-.orange-button:hover {
-  background-color: white;
-  color: var(--orange-500, #f97316);
-}
-
-.orange-button mat-icon {
-  color: white;
-}
-
-/* Aumentar el tamaño del input sin afectar el texto */
-.form-container .form .p-field .p-float-label input {
-  font-size: 16px;
+.small-form-container {
+  margin: 20px auto; /* Ajusta el margen para centrar el formulario */
   padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 100%; /* Ajusta el ancho máximo del formulario */
+  overflow-x: auto; /* Agrega desplazamiento horizontal si el contenido excede el ancho */
 }
 
-.form-container .form .p-field .p-float-label input:focus {
-  border-color: var(--orange-500, #f97316); /* Cambiar el color del borde en focus */
-  box-shadow: 0 0 5px var(--orange-500, #f97316); /* Añadir sombra al focus */
+.small-form {
+  display: flex; /* Usa un contenedor flex para las filas */
+  flex-wrap: nowrap; /* Evita que se envuelva el contenido en varias líneas */
+  padding: 10px;
 }
 
-/* Estilos para el contenedor del formulario */
-.form-container {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #f3f4f6;
+.card-list {
+  display: flex;.image-container {
+    width: 100%;
+    height: auto;
+  }
+  
+  .small-image {
+    max-width: 100%; /* Ajusta el ancho máximo de la imagen */
+    max-height: 100%; /* Ajusta la altura máxima de la imagen */
+  }
+  
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* Centra horizontalmente las tarjetas */
 }
 
-/* Estilos para el formulario */
-.form {
-  width: 100%;
-  max-width: 28rem;
-  margin-top: 1.5rem;
-  padding: 1.5rem;
-  background-color: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  border-radius: 0.5rem;
+.card {
+  width: 450px; /* Ajusta el ancho de las tarjetas */
+  margin-bottom: 20px;
 }
 
-.example-full-width {
-  width: 100%;
+
+
+.small-text {
+  font-size: 12px; /* Tamaño de fuente más pequeño */
 }
 
-.mat-mdc-chip-set-stacked .hover\:bg-orange-100:hover {
-  background-color: #ffedd5;
-}
 
-.mat-mdc-chip-set-stacked .warn {
-  background-color: #e57373;
-}
-
-.mat-mdc-chip-set-stacked .none {
-  background-color: inherit;
-}
-
-::ng-deep .p-float-label input:focus + label,
-::ng-deep .p-float-label input.ng-dirty + label {
-  color: var(--orange-500, #f97316) !important;
-}
-
-/* Estilos para p-inputSwitch */
-::ng-deep .p-inputswitch .p-inputswitch-slider {
-  background-color: var(--orange-200) !important;
-}
-
-::ng-deep .p-inputswitch .p-inputswitch-slider:before {
-  background-color: white !important; /* Puedes ajustar esto según tus necesidades */
-}
-
-::ng-deep .p-inputswitch.p-inputswitch-checked .p-inputswitch-slider {
-  background-color: var(--orange-500) !important;
-}
-
-.floating-label {
-  position: absolute;
-  pointer-events: none;
-  left: 0.75rem;
-  top: 0.75rem;
-  transition: 0.2s ease all;
-  color: #9e9e9e;
-}
-
-input:focus ~ .floating-label,
-input:not(:placeholder-shown) ~ .floating-label {
-  top: -1rem;
-  left: 0.75rem;
-  font-size: 0.75rem;
-  color: #3f51b5;
-}
-
-input {
-  width: 100%;
-  padding: 1rem 0.75rem;
-  box-sizing: border-box;
-  border: 1px solid #ccc;
-  border-radius: 0.25rem;
+/* Ajusta el tamaño del texto en las tarjetas */
+.card .p-card-title,
+.card .p-card-subtitle,
+.card .p-card-content,
+.card .p-button {
+  font-size: 12px; /* Reduzca el tamaño del texto */
 }
